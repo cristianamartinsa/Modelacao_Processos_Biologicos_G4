@@ -9,10 +9,14 @@ f4=(13.21*(0.25*y2)/(0.3+y2)*y1)-(0.7/6*y4)
 J=jacobian([f1, f2, f3, f4],[y1, y2, y3, y4]) 
 
 %Jacobiano no ponto estacionário
-J=subs(J,[y1,y2,y3,y4],[33.6372    0.0301    0.0849   86.7439]) 
+J1=subs(J,[y1,y2,y3,y4],[33.6372    0.0301    0.0849   86.7439])
+J2=subs(J,[y1,y2,y3,y4],[0.0000  350.0000    0.0000    0.0000]) 
 
 %Determinante
-d=det(J) 
+d1=det(J1) 
+d2=det(J2) 
 
 %Traço
-t=trace(J)
+t1=trace(J1) 
+t2=trace(J2)
+
