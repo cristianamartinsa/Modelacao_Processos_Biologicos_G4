@@ -1,6 +1,6 @@
 clc; clear all; close all;
 
-y0 = [0 0 0 0]; %Initial guess
+y0 = [0 0 0 0]; 
 %setNL=@Alinea_g_Modelo;
 %y=fsolve(setNL, y0)
 [y, fy]=fsolve(@Alinea_g_Modelo, y0)
